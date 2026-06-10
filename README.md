@@ -33,6 +33,10 @@ cd DiscourseReply
 2. 在 Boost 气泡旁会出现 💬 回复图标
 3. 点击图标即可引用内容并 @用户回复
 
+## 致谢
+
+linux.do
+
 ## 许可证
 
 MIT License
