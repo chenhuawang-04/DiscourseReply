@@ -1,0 +1,105 @@
+/**
+ * DisBoost Reply - 样式表
+ */
+
+/* 回复按钮样式 */
+.disboost-reply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-left: 6px;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+/* 悬停效果 */
+.disboost-reply-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+/* 点击效果 */
+.disboost-reply-btn:active {
+  transform: scale(0.95);
+}
+
+/* 焦点样式 */
+.disboost-reply-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* 通知提示样式 */
+.disboost-notification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #18181b;
+  color: #fafafa;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+  animation: disboost-slide-up 0.2s ease;
+  max-width: 90vw;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 通知淡出动画 */
+.disboost-notification.disboost-fade-out {
+  animation: disboost-fade-out 0.2s ease forwards;
+}
+
+@keyframes disboost-slide-up {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes disboost-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .disboost-reply-btn {
+    border-color: #4b5563;
+    color: #9ca3af;
+  }
+
+  .disboost-reply-btn:hover {
+    background: #27272a;
+    border-color: #6b7280;
+    color: #e5e7eb;
+  }
+
+  .disboost-notification {
+    background: #27272a;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
